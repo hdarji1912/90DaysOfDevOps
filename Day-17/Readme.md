@@ -118,7 +118,7 @@
 
 ### Running as Root
 
-![root_execution](9.png)
+![root_execution](images/9.png)
 
 ---
 
