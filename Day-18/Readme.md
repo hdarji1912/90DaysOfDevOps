@@ -12,7 +12,7 @@
      
 [Here is the script functions.sh](scripts/functions.sh)
 
-![functions.sh Output](images/01-function-sh.png)
+![functions.sh Output](images/1.png)
 
 ---
 
@@ -26,7 +26,7 @@
 
 [Here is the script disk_check.sh](scripts/disk_check.sh)
 
-![disk_check.sh Output](images/02-disk-check-sh.png)
+![disk_check.sh Output](images/2.png)
 
 ---
 
@@ -48,7 +48,7 @@
 
 [Here is the script strict_demo.sh](scripts/strict_demo.sh)
 
-![strict_demo.sh Output](images/03-strict-demo-sh.png)
+![strict_demo.sh Output](images/3.png)
 
 ---
 
@@ -62,7 +62,7 @@
 
 [Here is the script local_demo.sh](scripts/local_demo.sh)
 
-![local_demo.sh Output](images/04-local-demo-sh.png)
+![local_demo.sh Output](images/4.png)
 
 ---
 
@@ -86,7 +86,7 @@ Create `system_info.sh` that uses functions for everything:
 
 [Here is the script system_info.sh](scripts/system_info.sh)
 
-![system_info.sh Output](images/05-system-info.png)
+![system_info.sh Output](images/5.png)
 
 ---
 
