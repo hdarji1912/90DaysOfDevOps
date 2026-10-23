@@ -12,16 +12,16 @@
 
 - Setup git configuration
 
-`git config --global user.name "Jaishree Chaure"`
+`git config --global user.name "Hardik Darji"`
 
-`git config --global user.email "jaishreechoure2016@gmail.com"`
+`git config --global user.email "hdarji783@gmail.com"`
 
 # Git Commands
 
 | Command | Usage | Example |
 |----------|----------|----------|
 | `git init` | initialize a repo inside directory | `git init` |
-| `git clone <url>` | clone an existing repo | `git clone https://github.com/Jaishree97/90DaysOfDevOps.git` |
+| `git clone <url>` | clone an existing repo | `git clone https://github.com/hdarji1912/90DaysOfDevOps.git` |
 | `git add file` | add untracked files | `git add demo.txt` |
 | `git commit` | make a commit | `git commit -m "added demo.txt"` |
 | `git reset file` | unstage a file | `git reset demo.txt` |

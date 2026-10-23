@@ -10,7 +10,7 @@
 
 3. Verify your configuration
 
-![Git Configuration](../images/01-git-config.png)
+![Git Configuration](../images/1.png)
 
 ---
 
@@ -53,7 +53,13 @@
 
 4. View your commit history
 
-![Git Log](../images/02-git-log.png)
+![Git Log](../images/2.png)
+
+5. Git push 
+
+![Git push](../images/4.png)
+
+
 
 ---
 
@@ -73,13 +79,12 @@
 git log --oneline
 ```
 
+![Git Log](../images/3.png)
+
 Output:
 
 ```text
-77b91bd Added merge command
-8dcfc2e Added checkout command
-2d5dd7f Added branch commands
-45f52c9 Added git commands reference
+2dbedbf Added Day-22
 ```
 
 ---
