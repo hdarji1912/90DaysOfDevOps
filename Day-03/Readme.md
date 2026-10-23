@@ -1,4 +1,6 @@
-# Linux Commands Cheat Sheet
+## Day 03 – Linux Commands Practice
+
+> Linux Commands Cheat Sheet
 
 ## Process Management
 
