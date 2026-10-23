@@ -1,4 +1,6 @@
-# Linux Architecture Notes
+## Day 02 – Linux Architecture, Processes, and systemd
+
+> Linux Architecture Notes
 
 ## Core Components of Linux
 
@@ -57,7 +59,6 @@ systemctl status sshd
 ```
 
 ---
-
 # 5 Commands Used Daily
 
 * **ps** : View running processes.
