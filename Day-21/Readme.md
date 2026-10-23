@@ -196,8 +196,8 @@ Variables store data that can be reused throughout a script.
 ### Declaring Variables
 
 ```bash
-NAME="Jaishree"
-AGE=25
+NAME="Hardik"
+AGE=21
 ```
 
 > No spaces around `=`.
@@ -228,7 +228,7 @@ echo "Hello $NAME"
 Output:
 
 ```text
-Hello Jaishree
+Hello Hardik
 ```
 
 ### Single Quotes
@@ -1089,7 +1089,7 @@ cat "$FILE"
 
 set -x
 
-name="Jaishree"
+name="Hardik"
 echo "Hello $name"
 ```
 
