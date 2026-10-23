@@ -12,7 +12,7 @@ Your script should:
 
 [Here is the script input_valid.sh](scripts/input_valid.sh)
 
-![Input Validation](images/01-input-validation.png)
+![Input Validation](images/1.png)
 
 ---
 
@@ -23,9 +23,7 @@ Your script should:
 
 [Here is the script error_count.sh](scripts/error_count.sh)
 
-![Error Count](images/02-error-count-before.png)
-
-![Error Count Result](images/03-error-count-after.png)
+![Error Count Result](images/2.png)
 
 ---
 
@@ -36,7 +34,7 @@ Your script should:
 
 [Here is the script critical.sh](scripts/critical.sh)
 
-![Critical Events](images/04-critical-events.png)
+![Critical Events](images/3.png)
 
 ---
 
@@ -48,7 +46,7 @@ Your script should:
 
 [Here is the script top_error.sh](scripts/top_error.sh)
 
-![Top Error Messages](images/05-top-error-messages.png)
+![Top Error Messages](images/4.png)
 
 ---
 
@@ -65,9 +63,8 @@ Generate a summary report containing:
 
 [Here is the script log_analyzer_report.sh](scripts/log_analyzer_report.sh)
 
-![Report Content](images/06-report-content.png)
 
-![Report Generation](images/07-report-generation.png)
+![Report Generation](images/5.png)
 
 ---
 
