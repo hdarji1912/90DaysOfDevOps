@@ -11,7 +11,7 @@
 
 ### Output
 
-![for_loop](images/01-for-loop-sh.png)
+![for_loop](images/1.png)
 
 ---
 
@@ -23,7 +23,7 @@
 
 ### Output
 
-![count](images/02-count-sh.png)
+![count](images/2.png)
 
 ---
 
@@ -41,7 +41,7 @@
 
 ### Output
 
-![countdown](images/03-countdown-sh.png)
+![countdown](images/3.png)
 
 ---
 
@@ -57,7 +57,7 @@
 
 ### Output
 
-![greet](images/04-greet-sh.png)
+![greet](images/4.png)
 
 ---
 
@@ -71,7 +71,7 @@
 
 ### Output
 
-![args_demo](images/05-args-demo-sh.png)
+![args_demo](images/5.png)
 
 ---
 
@@ -86,13 +86,9 @@
 
 [Here is the script install_packages.sh](scripts/install_packages.sh)
 
-### Output (Installation)
-
-![package_installation](images/06-package-installation.png)
-
 ### Output (Package Status)
 
-![package_status](images/06-package-installation1.png)
+![package_status](images/6.png)
 
 ---
 
@@ -108,7 +104,7 @@
 
 ### Output
 
-![safe_script](images/07-safe-script-sh.png)
+![safe_script](images/7.png)
 
 ---
 
@@ -118,11 +114,11 @@
 
 ### Root User Verification
 
-![root_check](images/08-modify-file.png)
+![root_check](images/8.png)
 
 ### Running as Root
 
-![root_execution](images/08-modify-file1.png)
+![root_execution](9.png)
 
 ---
 
