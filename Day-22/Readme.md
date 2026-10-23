@@ -10,7 +10,7 @@
 
 3. Verify your configuration
 
-![Git Configuration](../images/1.png)
+![Git Configuration](images/1.png)
 
 ---
 
@@ -53,11 +53,13 @@
 
 4. View your commit history
 
-![Git Log](../images/2.png)
+![Git Log](images/2.png)
+
+![Git Log](images/3.png)
 
 5. Git push 
 
-![Git push](../images/4.png)
+![Git push](images/4.png)
 
 
 
@@ -78,8 +80,6 @@
 ```bash
 git log --oneline
 ```
-
-![Git Log](../images/3.png)
 
 Output:
 
