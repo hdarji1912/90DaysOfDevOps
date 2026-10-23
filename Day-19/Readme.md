@@ -12,7 +12,7 @@ Create `log_rotate.sh` that:
 
 [Here is the script log_rotate.sh](scripts/log_rotate.sh)
 
-![log-rotate](./images/01-log-rotate.png)
+![log-rotate](./images/1.png)
 
 ---
 
@@ -21,7 +21,7 @@ Create `log_rotate.sh` that:
 Create `backup.sh` that:
 
 1. Takes a source directory and backup destination as arguments
-2. Creates a timestamped `.tar.gz` archive (e.g., `backup-2026-06-15.tar.gz`)
+2. Creates a timestamped `.tar.gz` archive (e.g., `backup-2026-10-23.tar.gz`)
 3. Verifies the archive was created successfully
 4. Prints archive name and size
 5. Deletes backups older than 14 days from the destination
@@ -29,7 +29,7 @@ Create `backup.sh` that:
 
 [Here is the script backup.sh](scripts/backup.sh)
 
-![backup](./images/02-backup.png)
+![backup](./images/2.png)
 
 ---
 
@@ -86,7 +86,7 @@ Create `maintenance.sh` that:
 
 [Here is the script maintenance.sh](scripts/maintenance.sh)
 
-![maintenance](./images/03-maintenance.png)
+![maintenance](./images/3.png)
 
 ---
 
