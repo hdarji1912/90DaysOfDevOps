@@ -10,7 +10,7 @@ Learned how to manage repositories, issues, pull requests, workflows, releases, 
 - Authenticated GitHub account
 - Verified active login session
 
-![GitHub Authentication](images/01-gh-auth-status.png)
+![GitHub Authentication](images/.png)
 
 ### Authentication Methods Supported
 
@@ -26,7 +26,7 @@ Learned how to manage repositories, issues, pull requests, workflows, releases, 
 - Viewed repository details
 - Listed repositories under the account
 
-![Repository Details](images/02-repo-details.png)
+![Repository Details](images/.png)
 
 ![Repository List](images/03-repo-list.png)
 
