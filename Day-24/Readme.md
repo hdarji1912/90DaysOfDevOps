@@ -72,18 +72,20 @@ In this hands-on lab, I explored advanced Git workflows including merge strategi
 
 ![Task 2.1](images/6.png)
 
+![Task 2.2](images/7.png)
+
 ### 2. While on `main`, add a new commit
 
 - Added a new commit on `main`, causing it to move ahead of the feature branch.
 
-![Task 2.2](images/7.png)
+![Task 2.2](images/8.png)
 
 ### 3. Switch to `feature-dashboard` and rebase it onto `main`
 
 - Rebasing replayed the feature branch commits on top of the latest commit from `main`.
 - The branch was successfully updated with the latest changes.
 
-![Task 2.3](images/8.png)
+![Task 2.3](images/9.png)
 
 ### 4. Observe the history after rebase
 
@@ -91,7 +93,7 @@ In this hands-on lab, I explored advanced Git workflows including merge strategi
 - The commit history is linear and easier to understand.
 - No merge commit was created.
 
-![Task 2.4](images/9.png)
+![Task 2.4](images/10.png)
 
 ### 5. Key Learnings
 
@@ -136,11 +138,11 @@ In this hands-on lab, I explored advanced Git workflows including merge strategi
 
 - Added profile feature changes through multiple commits.
 
-![Task 3.1](images/10.png)
+![Task 3.1](images/11.png)
 
-![Task 3.1.1](images/11.png)
+![Task 3.1.1](images/12.png)
 
-![Task 3.1.2](images/12.png)
+
 
 ### 2. Merge `feature-profile` into `main` using `--squash`
 
