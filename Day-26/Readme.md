@@ -10,7 +10,7 @@ Learned how to manage repositories, issues, pull requests, workflows, releases, 
 - Authenticated GitHub account
 - Verified active login session
 
-![GitHub Authentication](images/.png)
+![GitHub Authentication](images/1.png)
 
 ### Authentication Methods Supported
 
@@ -26,9 +26,9 @@ Learned how to manage repositories, issues, pull requests, workflows, releases, 
 - Viewed repository details
 - Listed repositories under the account
 
-![Repository Details](images/.png)
+![Repository Details](images/2.png)
 
-![Repository List](images/03-repo-list.png)
+![Repository List](images/3.png)
 
 ---
 
@@ -39,11 +39,11 @@ Learned how to manage repositories, issues, pull requests, workflows, releases, 
 - Viewed issue details
 - Closed the issue successfully
 
-![Issue List](images/04-issue-list.png)
+![Issue List](images/4.png)
 
-![Issue Details](images/05-issue-view.png)
+![Issue Details](images/5.png)
 
-![Issue Closed](images/06-issue-close.png)
+![Issue Closed](images/6.png)
 
 ### Use Case
 
@@ -58,13 +58,13 @@ GitHub Issues can be used to track bugs, tasks, feature requests, and automate p
 - Reviewed Pull Request details
 - Merged Pull Request successfully
 
-![Branch Created](images/07-branch-created.png)
+![Branch Created](images/7.png)
 
-![PR Created](images/08-pr-created.png)
+![PR Created](images/8.png)
 
-![PR Details](images/09-pr-viewed.png)
+![PR Details](images/9.png)
 
-![PR Merged](images/10-pr-merged-view.png)
+![PR Merged](images/10.png)
 
 ### Merge Strategies
 
@@ -84,9 +84,9 @@ GitHub CLI allows developers to view pull request details, review changes, inspe
 - Viewed workflow execution details
 - Explored workflow monitoring capabilities
 
-![Workflow Runs](images/11-workflow-run.png)
+![Workflow Runs](images/11.png)
 
-![Workflow Details](images/12-workflow-run-details.png)
+![Workflow Details](images/12.png)
 
 ### CI/CD Relevance
 
@@ -100,33 +100,33 @@ GitHub Actions helps automate testing, validation, deployment, and workflow exec
 
 Retrieved GitHub user information directly through the GitHub API.
 
-![GitHub API](images/13-gh-api-user.png)
+![GitHub API](images/13.png)
 
 ### GitHub Gist
 
 Created and managed a GitHub Gist from the terminal.
 
-![GitHub Gist](images/14-gh-gist.png)
+![GitHub Gist](images/14.png)
 
 ### GitHub Release
 
 Created a release and version tag using GitHub CLI.
 
-![Release Created](images/15-gh-release.png)
+![Release Created](images/15.png)
 
-![Release View](images/16-gh-release-github-view.png)
+![Release View](images/16.png)
 
 ### GitHub Alias
 
 Created a custom alias to simplify frequently used commands.
 
-![GitHub Alias](images/17-gh-alias.png)
+![GitHub Alias](images/17.png)
 
 ### Repository Search
 
 Searched GitHub repositories directly from the terminal.
 
-![Repository Search](images/18-gh-search-repos.png)
+![Repository Search](images/18.png)
 
 ---
 
