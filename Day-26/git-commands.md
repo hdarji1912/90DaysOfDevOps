@@ -100,7 +100,4 @@ A concise reference guide for GitHub CLI commands explored during **Day 26** of 
 - Monitor GitHub Actions workflows and workflow runs.
 - Automate GitHub operations using scripts and CI/CD pipelines.
 
----
 
-**Day 26 – GitHub CLI (gh)**  
-**#90DaysOfDevOps**
