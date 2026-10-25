@@ -33,8 +33,6 @@ Create and run a custom Docker image using Ubuntu as the base image.
 
 ![Dockerfile](images/1.png)
 
-![Container Output](images/2.png)
-
 ---
 
 # Task 2: Dockerfile Instructions
@@ -73,11 +71,11 @@ Understand the purpose of commonly used Dockerfile instructions by building and 
 - Nginx container started successfully.
 - Application served correctly in the browser.
 
-![Dockerfile](images/3.png)
+![Dockerfile](images/2.png)
 
-![Build Output](images/4.png)
+![Build Output](images/3.png)
 
-![Browser Output](images/5.png)
+![Browser Output](images/4.png)
 
 ---
 
@@ -113,9 +111,9 @@ Compare the runtime behavior of **CMD** and **ENTRYPOINT** instructions.
 - Successfully verified the behavior of **CMD**.
 - Successfully verified the behavior of **ENTRYPOINT**.
 
-![CMD Demo](images/6.png)
+![CMD Demo](images/5.png)
 
-![ENTRYPOINT Demo](images/7.png)
+![ENTRYPOINT Demo](images/6.png)
 
 ---
 
@@ -144,9 +142,9 @@ Deploy a static HTML website using an Nginx Docker container.
 - Website deployed successfully.
 - Browser output verified.
 
-![Website Build](images/8.png)
+![Website Build](images/7.png)
 
-![Browser Output](images/9.png)
+![Browser Output](images/8.png)
 
 ---
 
@@ -179,7 +177,7 @@ Reduce the Docker build context by excluding unnecessary files.
 - Docker build context optimized successfully.
 - Unnecessary files were excluded.
 
-![Docker Ignore](images/10.png)
+![Docker Ignore](images/9.png)
 
 ---
 
@@ -209,11 +207,9 @@ Understand Docker layer caching and its impact on build performance.
 - Successfully observed Docker layer caching.
 - Verified faster image rebuilds.
 
-![Initial Build](images/11.png)
+![Initial Build](images/10.png)
 
-![Rebuild](images/12.png)
-
-![Optimized Website](images/13.png)
+![Optimized Website](images/11.png)
 
 ---
 
