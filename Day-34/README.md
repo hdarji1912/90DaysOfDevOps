@@ -39,6 +39,11 @@ Learn how Docker Compose can be used to build and manage a production-style mult
 
 ---
 
+## Architecture Flow :
+
+![Architecture](images/architecture.png)
+
+
 # Task 1: Build the Product Catalog Application
 
 ### 1. Create the Project Structure
