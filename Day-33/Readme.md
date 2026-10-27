@@ -134,7 +134,7 @@ Docker Compose automatically:
 - Started both containers
 
 ![Compose Up](images/7.png)
-7
+
 ---
 
 ### 4. Verify Docker Network
@@ -173,7 +173,7 @@ Recreated the application and confirmed that the database data remained availabl
 
 Completed the initial WordPress installation from the browser.
 
-![WordPress Installation](images/11.png)
+![WordPress Installation](images/12.png)
 
 ---
 
@@ -181,7 +181,7 @@ Completed the initial WordPress installation from the browser.
 
 Successfully logged in to the WordPress Admin Dashboard and confirmed that the application was working correctly.
 
-![WordPress Dashboard](images/12.png)
+![WordPress Dashboard](images/13.png)
 
 ### Key Observation
 
@@ -198,7 +198,7 @@ Successfully logged in to the WordPress Admin Dashboard and confirmed that the a
 
 Started all application services in detached mode and verified that the containers were running successfully in the background.
 
-![Start Services](images/13.png)
+![Start Services](images/14.png)
 
 ---
 
@@ -206,7 +206,7 @@ Started all application services in detached mode and verified that the containe
 
 Viewed logs from all running services to monitor container activity and verify successful startup.
 
-![Compose Logs](images/14.png)
+![Compose Logs](images/15.png)
 
 ---
 
@@ -214,7 +214,7 @@ Viewed logs from all running services to monitor container activity and verify s
 
 Filtered logs for the WordPress service to troubleshoot and monitor a single container.
 
-![WordPress Logs](images/15.png)
+![WordPress Logs](images/16.png)
 
 ---
 
@@ -222,7 +222,7 @@ Filtered logs for the WordPress service to troubleshoot and monitor a single con
 
 Successfully performed service lifecycle operations including stopping, starting, restarting, and removing the application.
 
-![Compose Operations](images/16.png)
+![Compose Operations](images/17.png)
 
 ---
 
@@ -230,7 +230,7 @@ Successfully performed service lifecycle operations including stopping, starting
 
 Confirmed that the WordPress application remained accessible after restarting the services.
 
-![WordPress Login](images/16.png)
+![WordPress Login](images/18.png)
 
 ### Key Observation
 
@@ -249,7 +249,7 @@ Created a `.env` file to store database credentials separately from the Docker C
 
 > **Note:** The `.env` file contains sensitive credentials and is excluded from the repository in production environments.
 
-![Environment File](images/17.png)
+![Environment File](images/19.png)
 
 ---
 
@@ -259,7 +259,7 @@ Modified the Compose configuration to load database credentials from the `.env` 
 
 [wordpress-mysql-env/docker-compose.yml](wordpress-mysql-env/docker-compose.yml)
 
-![Updated Compose File](images/18.png)
+![Updated Compose File](images/20.png)
 
 ---
 
@@ -267,7 +267,7 @@ Modified the Compose configuration to load database credentials from the `.env` 
 
 Verified that Docker Compose successfully loaded all variables from the `.env` file and generated the expected configuration.
 
-![Compose Configuration](images/19.png)
+![Compose Configuration](images/21.png)
 
 ---
 
@@ -275,7 +275,7 @@ Verified that Docker Compose successfully loaded all variables from the `.env` f
 
 Successfully deployed the application using the externalized configuration and confirmed that both services started correctly.
 
-![Application Deployment](images/20.png)
+![Application Deployment](images/22.png)
 
 ### Key Observation
 
