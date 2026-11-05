@@ -6,6 +6,10 @@ The objective of this hands-on exercise was to understand how Docker multi-stage
 
 ---
 
+## Architecture
+
+![Architecture](images/architecture.png)
+
 ## Prerequisites
 
 - Docker Engine
@@ -76,9 +80,7 @@ The single-stage image included the entire build environment, source code, depen
 
 ![Single Stage Build](images/1.png)
 
-![Image Verification](images/2.png)
-
-![Container Deployment](images/3.png)
+![Container Deployment](images/2.png)
 
 ---
 
@@ -98,11 +100,9 @@ Created a multi-stage Dockerfile to separate the build environment from the runt
 
 The multi-stage build copied only the required application files into the final image, significantly reducing the image size while   maintaining identical functionality.
 
-![Multi-Stage Build](images/4.png)
+![Multi-Stage Build](images/3.png)
 
-![Image Comparison](images/5.png)
-
-![Optimized Container](images/6.png)
+![Optimized Container](images/4.png)
 
 ---
 
@@ -123,13 +123,13 @@ Published the optimized Docker image to Docker Hub for centralized image storage
 
 The optimized image was successfully stored in Docker Hub and could be downloaded and executed on any Docker-enabled environment without rebuilding the application.
 
-![Docker Login](images/7.png)
+![Docker Login](images/5.png)
 
-![Image Tagging](images/8.png)
+![Image Tagging](images/6.png)
 
-![Docker Push](images/9.png)
+![Docker Push](images/7.png)
 
-![Image Verification](images/10.png)
+![Image Verification](images/8.png)
 
 ---
 
@@ -148,11 +148,11 @@ Configured the Docker Hub repository for better version management.
 
 Using version tags simplifies release management and enables consistent deployments across different environments.
 
-![Docker Hub Repository](images/11.png)
+![Docker Hub Repository](images/9.png)
 
-![Repository Details](images/12.png)
+![Repository Details](images/10.png)
 
-![Version Management](images/13.png)
+![Version Management](images/11.png)
 
 ---
 
@@ -173,9 +173,9 @@ Created a production-ready Dockerfile by applying Docker best practices.
 
 These best practices improve security, reduce image size, increase maintainability, and make the image suitable for production deployments.
 
-![Production Dockerfile](images/14.png)
+![Production Dockerfile](images/12.png)
 
-![Production Container](images/15.png)
+![Production Container](images/13.png)
 
 ---
 
@@ -187,11 +187,11 @@ Verified that both optimized Docker images successfully served the Node.js appli
 
 ### Port 3000
 
-![Application Output](images/16.png)
+![Application Output](images/14.png)
 
 ### Port 3001
 
-![Secure Application Output](images/17.png)
+![Secure Application Output](images/15.png)
 
 ---
 
@@ -200,7 +200,7 @@ Verified that both optimized Docker images successfully served the Node.js appli
 | Build Type | Image Size |
 |------------|-----------:|
 | Single-Stage Build | **409 MB** |
-| Multi-Stage Build | **57.4 MB** |
+| Multi-Stage Build | **58.5 MB** |
 
 ## Result
 
