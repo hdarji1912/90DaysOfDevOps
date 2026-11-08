@@ -15,6 +15,7 @@
 I selected a Node.js Task Manager API because it represents a common backend application used in real-world environments. It demonstrates how a REST API communicates with a MongoDB database while running inside Docker containers. This project also provides hands-on experience with container networking, persistent storage, and Docker Compose.
 
 **Project:** [`task-manager-api`](./task-manager-api)
+
 ---
 
 ## Task 2: Dockerfile
