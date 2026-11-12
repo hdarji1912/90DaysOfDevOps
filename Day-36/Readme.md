@@ -65,18 +65,18 @@ docker compose up -d
 Tagged the locally built Docker image before publishing it to Docker Hub.
 
 ```bash
-docker tag task-manager-api-app:v1 jaishreechaure/task-manager-api:v1
+docker tag task-manager-api-app:v1 darjihardik/task-manager-api:v1
 ```
 
 ### Push to Docker Hub
 
 ```bash
-docker push jaishreechaure/task-manager-api:v1
+docker push darjihardik/task-manager-api:v1
 ```
 
 ### Docker Hub Repository
 
-https://hub.docker.com/repository/docker/jaishreechaure/task-manager-api/general
+https://hub.docker.com/repository/docker/darjihardik/task-manager-api/general
 
 ---
 
@@ -95,23 +95,20 @@ To verify that the image works independently of the local build:
 
 ### Application Home Page
 
-![Application Home Page](./images/browser-output1.png)
+![Application Home Page](./images/1.png)
 
 ### CRUD API Testing
 
-![CRUD API Testing](./images/browser-output2.png)
+![CRUD API Testing](./images/2.png)
 
 ### Final Docker Images
 
-![Docker Images](./images/final-images.png)
+![Docker Images](./images/3.png)
 
 ### Docker Hub Push
 
-![Docker Hub Push](./images/4.2-dockerhub-push.png)
+![Docker Hub Push](./images/4.png)
 
-### Fresh Deployment Test
-
-![Fresh Deployment Test](./images/5.1-testing.png)
 
 ---
 
@@ -149,7 +146,7 @@ The Task Manager API is a lightweight RESTful application built with Node.js, Ex
 
 Repository
 
-https://hub.docker.com/repositories/hdarji1912
+https://hub.docker.com/repositories/darjihardik
 
 Image
 
