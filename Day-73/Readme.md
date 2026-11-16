@@ -56,7 +56,7 @@ Traces → Slow database call caused the request failure
 
 This architecture provides **end-to-end visibility** across the application, host, and Docker environment by collecting **metrics, logs, and traces** into dedicated observability components.
 
-![Task 1.4](./images/obs_arch.png)
+![Task 1.4](./images/architecture.png)
 
 - **Application → Prometheus** — Collects application metrics exposed through `/metrics`.
 - **Application → Promtail → Loki** — Collects and stores application logs.
@@ -131,7 +131,7 @@ docker compose up -d
 
 This confirms that Docker Compose successfully created and started the Prometheus container.
 
-![Task 2.1](./images/01-task-2.1-prom_running.png) 
+![Task 2.1](./images/1.png) 
 
 ### 4. Verify Prometheus Logs and Configuration
 
@@ -140,7 +140,7 @@ docker logs prometheus
 ```
 The logs confirm that Prometheus loaded the configuration, initialized its TSDB, and started the web server on port `9090`.
 
-![Task 2.2](./images/02-task-2.2-prom_config_logs.png)
+![Task 2.2](./images/2.png)
 
 ### 5. Open Prometheus Web UI
 
@@ -164,7 +164,7 @@ http://localhost:9090/metrics
 ```
 with state: `Up`
 
-![Task 2.3](./images/03-task-2.3-prom_targets_up.png)
+![Task 2.3](./images/3.png)
 
 This confirms that Prometheus is successfully scraping its own metrics endpoint.
 
@@ -233,7 +233,7 @@ count({__name__=~".+"})
 ```
 This counts the active time series currently stored by Prometheus that have a metric name.
 
-![Task 3.1](./images/04-task-3.1-prom_query_graph.png) 
+![Task 3.1](./images/4.png) 
 
 ### Query 2 — Prometheus Memory Usage
 
@@ -244,7 +244,7 @@ process_resident_memory_bytes
 ```
 This shows the amount of physical memory currently used by the Prometheus process.
 
-![Task 3.2](./images/05-task-3.2-prom_memory_graph.png) 
+![Task 3.2](./images/5.png) 
 
 ### Query 3 — Total HTTP Requests
 
@@ -255,7 +255,7 @@ prometheus_http_requests_total
 ```
 This counter tracks HTTP requests handled by the Prometheus server, with labels providing additional dimensions such as handler, status code, and instance.
 
-![Task 3.3](./images/06-task-3.3-prom_http_requests.png) 
+![Task 3.3](./images/6.png) 
 
 ### Query 4 — Filter Requests by Handler
 
@@ -266,7 +266,7 @@ prometheus_http_requests_total{handler="/api/v1/query"}
 ```
 This filters the HTTP request counter to show requests handled specifically by Prometheus's `/api/v1/query` API endpoint.
 
-![Task 3.4](./images/07-task-3.4-prom_api_requests.png)
+![Task 3.4](./images/7.png)
 
 **Document:** What is the difference between a counter and a gauge? Give one real-world example of each.
 
@@ -291,7 +291,7 @@ up
 ```
 Returns `1` when the target was successfully scraped and `0` when the scrape failed.
 
-![Task 4.1](./images/08-task-4.1-prom_up_query.png) 
+![Task 4.1](./images/8.png) 
 
 ### 2. Range Vector
 
@@ -302,7 +302,7 @@ prometheus_http_requests_total[5m]
 ```
 Returns the HTTP request counter samples collected during the last 5 minutes.
 
-![Task 4.2](./images/09-task-4.2-prom_range_query.png) 
+![Task 4.2](./images/9.png) 
 
 ### 3. Rate
 
@@ -311,7 +311,7 @@ Returns the HTTP request counter samples collected during the last 5 minutes.
 ```promql
 rate(prometheus_http_requests_total[5m])
 ```
-![Task 4.3](./images/10-task-4.3-prom_rate_query.png) 
+![Task 4.3](./images/10.png) 
 
 ### 4. Aggregation
 
@@ -322,7 +322,7 @@ sum(rate(prometheus_http_requests_total[5m]))
 ```
 Shows the overall HTTP request rate across all label combinations.
 
-![Task 4.4](./images/11-task-4.4-prom_rate_sum.png) 
+![Task 4.4](./images/11.png) 
 
 ### 5. Filter by Label
 
@@ -333,14 +333,14 @@ prometheus_http_requests_total{code="200"}
 ```
 Shows HTTP requests that returned a successful `200` status code.
 
-![Task 4.5](./images/12-task-4.5-prom_200_requests.png) 
+![Task 4.5](./images/12.png) 
 
 ```promql
 prometheus_http_requests_total{code!="200"}
 ```
 Shows HTTP requests that returned a status code other than `200`.
 
-![Task 4.6](./images/13-task-4.6-prom_status_codes.png) 
+![Task 4.6](./images/13.png) 
 
 ### 6. Arithmetic
 
@@ -351,7 +351,7 @@ process_resident_memory_bytes / 1024 / 1024
 ```
 Converts Prometheus process memory usage from bytes to megabytes.
 
-![Task 4.7](./images/14-task-4.7-prom_status_codes.png) 
+![Task 4.7](./images/14.png) 
 
 ### 7. Top-K
 
@@ -362,7 +362,7 @@ topk(5, prometheus_http_requests_total)
 ```
 Shows the five HTTP request series with the highest counter values.
 
-![Task 4.8](./images/15-task-4.8-prom_top5.png) 
+![Task 4.8](./images/15.png) 
 
 ### Exercise: Non-200 Request Rate
 
@@ -373,7 +373,7 @@ rate(prometheus_http_requests_total{code!="200"}[5m])
 ```
 This helps identify the current rate of unsuccessful HTTP responses.
 
-![Task 4.9](./images/16-task-4.9-prom_2xx_rate.png)
+![Task 4.9](./images/16.png)
 
 > **Note:** A result of `0` means no non-200 requests were recorded during the effective 5-minute window.
 
@@ -484,7 +484,7 @@ docker ps
 
 This confirms that Docker Compose successfully built the Notes App image and started both the application and Prometheus containers.
 
-![Task 5.1](./images/17-task-5.1-notes_prom_up.png) 
+![Task 5.1](./images/17.png) 
 
 ### 5. Verify Prometheus Targets
 
@@ -506,7 +506,7 @@ http://notes-app:8000/metrics
 ```
 This confirms that Prometheus can reach the Django application and successfully scrape its `/metrics` endpoint.
 
-![Task 5.2](./images/18-task-5.2-prom_targets_up.png)
+![Task 5.2](./images/18.png)
 
 ### 6. Generate Application Traffic
 
@@ -561,7 +561,7 @@ After changing the configuration, recreate the stack:
 docker compose up -d --build
 ```
 
-![Task 6.1](./images/19-task-6.1-prom_storage_config.png) 
+![Task 6.1](./images/19.png) 
 
 ### 3. Inspect TSDB Status
 
@@ -569,7 +569,7 @@ Open `Status > TSDB Status` in the Prometheus UI.
 
 This page provides an overview of the data currently stored in the TSDB, including the number of series, chunks, label pairs, and the time range of stored samples.
 
-![Task 6.2](./images/20-task-6.2-prom_tsdb_status.png) 
+![Task 6.2](./images/20.png) 
 
 ### 4. Verify Persistent Volume and Cleanup
 
@@ -583,7 +583,7 @@ docker volume ls | grep observability
 docker compose down -v
 docker volume ls | grep observability
 ```
-![Task 6.3](./images/21-task-6.3-prom_volume_cleanup.png)
+![Task 6.3](./images/21.png)
 
 > **Important:** `docker compose down` removes containers and networks but preserves named volumes. `docker compose down -v` also removes the named volumes and permanently deletes the stored Prometheus data.
 
