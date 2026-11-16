@@ -63,7 +63,7 @@ docker compose ps
 ```
 This starts the services and confirms that Node Exporter is running.
 
-![Task 1.1](./images/01-task-1.1-compose-up.png) 
+![Task 1.1](./images/1.png) 
 
 ### 5. Verify Node Exporter Metrics
 
@@ -74,7 +74,7 @@ curl http://localhost:9100/metrics | head -20
 ```
 The response contains Prometheus-formatted metrics exported from the Linux host.
 
-![Task 1.2](./images/02-task-1.2-prometheus-metrics.png) 
+![Task 1.2](./images/2.png) 
 
 ### 6. Verify CPU Metrics
 
@@ -85,7 +85,7 @@ curl -s http://localhost:9100/metrics | grep '^node_cpu_seconds_total' | head
 ```
 `node_cpu_seconds_total` is a counter representing cumulative CPU time for each CPU and mode.
 
-![Task 1.3](./images/03-task-1.3-cpu-metrics.png) 
+![Task 1.3](./images/3.png) 
 
 ### 7. Verify Prometheus Scraping
 
@@ -98,7 +98,7 @@ The node-exporter target should show: `State: UP`
 
 This confirms that Prometheus can successfully scrape Node Exporter.
 
-![Task 1.4](./images/04-task-1.4-target-health.png) 
+![Task 1.4](./images/4.png) 
 
 ### 8. Query Host Metrics in Prometheus
 
@@ -109,7 +109,7 @@ node_cpu_seconds_total{mode="idle"}
 ```
 This returns cumulative idle CPU time for each CPU core.
 
-![Task 1.5](./images/05-task-1.5-cpu-idle-query.png)
+![Task 1.5](./images/5.png)
 
 **Memory Total**
 
@@ -118,7 +118,7 @@ node_memory_MemTotal_bytes
 ```
 This shows the total memory available on the host.
 
-![Task 1.6](./images/06-task-1.6-memory-metric.png)
+![Task 1.6](./images/6.png)
 
 **Memory Available**
 
@@ -127,7 +127,7 @@ node_memory_MemAvailable_bytes
 ```
 This shows the memory currently available to the system.
 
-![Task 1.7](./images/07-task-1.7-memory-available.png) 
+![Task 1.7](./images/7.png) 
 
 **Memory Usage Percentage**
 
@@ -136,7 +136,7 @@ This shows the memory currently available to the system.
 ```
 This calculates approximate host memory utilization as a percentage.
 
-![Task 1.8](./images/08-task-1.8-memory-usage-percent.png) 
+![Task 1.8](./images/8.png) 
 
 **Disk Usage Percentage**
 
@@ -145,7 +145,7 @@ This calculates approximate host memory utilization as a percentage.
 ```
 This calculates filesystem usage percentage.
 
-![Task 1.9](./images/09-task-1.9-disk-usage-percent.png) 
+![Task 1.9](./images/9.png) 
 
 **Network Receive Rate**
 
@@ -154,7 +154,7 @@ rate(node_network_receive_bytes_total[5m])
 ```
 `rate()` converts the cumulative network-receive counter into bytes received per second over the last 5 minutes.
 
-![Task 1.10](./images/10-task-1.10-network-receive-rate.png)
+![Task 1.10](./images/10.png)
 
 ---
 
@@ -210,7 +210,7 @@ docker compose ps
 ```
 This starts cAdvisor along with the existing monitoring services and verifies their status.
 
-![Task 2.1](./images/11-task-2.1-cadvisor-stack.png) 
+![Task 2.1](./images/11.png) 
 
 ### 5. Restart Prometheus
 
@@ -233,7 +233,7 @@ cAdvisor provides a web interface for inspecting Docker containers and their res
 
 Click `Docker Containers` to view per-container statistics.
 
-![Task 2.2](./images/12-task-2.2-cadvisor-dashboard.png) 
+![Task 2.2](./images/12.png) 
 
 ### 7. Query Container Metrics in Prometheus
 
@@ -244,7 +244,7 @@ rate(container_cpu_usage_seconds_total{name!=""}[5m])
 ```
 `container_cpu_usage_seconds_total` is a cumulative CPU-time counter. `rate()` converts it into CPU usage per second over the last 5 minutes.
 
-![Task 2.3](./images/13-task-2.3-container-cpu-usage.png) 
+![Task 2.3](./images/13.png) 
 
 **Memory usage per container**
 
@@ -253,7 +253,7 @@ container_memory_usage_bytes{name!=""}
 ```
 This returns the current memory usage of each named container.
 
-![Task 2.4](./images/14-task-2.4-container-memory-usage.png) 
+![Task 2.4](./images/14.png) 
 
 **Container Network Receive Rate**
 
@@ -262,7 +262,7 @@ rate(container_network_receive_bytes_total{name!=""}[5m])
 ```
 This calculates the rate at which each container is receiving network data.
 
-![Task 2.5](./images/15-task-2.5-container-network-rx.png)
+![Task 2.5](./images/15.png)
 
 **Top 3 Containers by Memory Usage**
 
@@ -273,7 +273,7 @@ topk(3, container_memory_usage_bytes{name!=""})
 
 The `{name!=""}` filter removes aggregated/system-level entries and shows only named containers.
 
-![Task 2.6](./images/16-task-2.6-top-container-memory.png)
+![Task 2.6](./images/16.png)
 
 ### 8. Node Exporter vs cAdvisor
 
@@ -327,7 +327,7 @@ This validates the YAML and shows the resolved Docker Compose configuration.
 docker compose up -d
 docker compose ps
 ```
-![Task 3.1](./images/17-task-3.1-grafana-stack.png) 
+![Task 3.1](./images/17.png) 
 
 This starts Grafana with the existing monitoring stack and verifies that the containers are running.
 
@@ -351,7 +351,7 @@ Password: admin123
 3. Set URL to `http://prometheus:9090` (Use the Docker service name `prometheus` instead of localhost because Grafana and Prometheus communicate through the Docker monitoring network.)
 4. Click Save & Test -- you should see "Successfully queried the Prometheus API"
 
-![Task 3.2](./images/18-task-3.2-prometheus-api-success.png)
+![Task 3.2](./images/18.png)
 
 ---
 
@@ -411,7 +411,7 @@ Save the complete dashboard as: **`DevOps Observability Overview`**
 
 After saving, `exit Edit` mode and return to the normal dashboard view. This confirms that the complete dashboard is `saved` and all panels are displayed together.
 
-![Task 4.1](./images/19-task-4.1-grafana-dashboard.png)
+![Task 4.1](./images/19.png)
 
 ---
 
@@ -510,7 +510,7 @@ Go to:
 
 Prometheus should already be configured without manually adding it through the UI.
 
-![Task 5.1](./images/20-task-5.1-grafana-datasource.png)
+![Task 5.1](./images/20.png)
 
 **Document:** Why is provisioning datasources via YAML better than configuring them manually through the UI?
 
@@ -542,7 +542,7 @@ Select your `Prometheus datasource` and click `Import`.
 
 Explore the imported dashboard. It has dozens of panels covering CPU, memory, disk, network, and more -- all built on the same Node Exporter metrics you queried manually.
 
-![Task 6.1](./images/21-task-6.1-node-exporter-dashboard.png) 
+![Task 6.1](./images/21.png) 
 
 
 ### 2. Import cAdvisor Dashboard
@@ -592,7 +592,7 @@ docker compose ps
 ```
 All services should show as `Up`.
 
-![Task 6.2](./images/22-task-6.2-observability-stack-status.png)
+![Task 6.2](./images/22.png)
 
 ### 5. Stop the Stack
 
@@ -603,7 +603,7 @@ docker compose down
 ```
 This removes the containers and Compose network while keeping named volumes unless `-v` is explicitly used.
 
-![Task 6.3](./images/23-task-6.3-compose-down.png) 
+![Task 6.3](./images/23.png) 
 
 ---
 
