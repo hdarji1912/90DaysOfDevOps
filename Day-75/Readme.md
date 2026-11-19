@@ -120,7 +120,7 @@ curl http://localhost:3100/ready
 
 You should see `ready`, confirming that Loki is running and ready to receive logs.
 
-![Task 2.1](./images/01-task-2.1-loki-ready.png)
+![Task 2.1](./images/1.png)
 
 ---
 
@@ -194,7 +194,7 @@ for i in $(seq 1 20); do curl -s http://localhost:8000 > /dev/null; done
 ```
 This generates fresh container logs that Promtail can collect and send to Loki. The screenshot confirms that Promtail discovered the Docker containers and their labels.
 
-![Task 3.1](./images/02-task-3.1-promtail-labels.png)
+![Task 3.1](./images/2.png)
 
 ---
 
@@ -231,7 +231,7 @@ docker compose ps grafana
 ```
 This applies the datasource configuration and makes Loki available to Grafana.
 
-![Task 4.1](./images/03-task-4.1-grafana-restart-status.png) 
+![Task 4.1](./images/3.png) 
 
 **Verify Loki in Grafana**
 
@@ -248,7 +248,7 @@ Then:
 
 Grafana now shows both Loki and Prometheus, confirming that Loki was successfully connected as a datasource.
 
-![Task 4.2](./images/04-task-4.2-grafana-datasources.png)
+![Task 4.2](./images/4.png)
 
 ---
 
@@ -267,11 +267,11 @@ filter logs by labels:
 ```
 This returns logs from all Docker containers.
 
-![Task 5.1](./images/05-task-5.1-loki-docker-logs.png) 
+![Task 5.1](./images/5.png) 
 
 The same label-based approach can be used to focus on a specific container, such as `notes-app`.
 
-![Task 5.2](./images/06-task-5.2-notes-app-logs.png)
+![Task 5.2](./images/6.png)
 
 This shows all Docker container logs.
 
@@ -284,7 +284,7 @@ Query logs from the Prometheus container:
 ```
 This isolates Prometheus container logs.
 
-![Task 5.3](./images/07-task-5.3-prometheus-logs.png) 
+![Task 5.3](./images/7.png) 
 
 ### 3. Keyword search
 
@@ -295,7 +295,7 @@ filter log lines by content:
 ```
 `|=` means "line contains". This finds all log lines with the word "error".
 
-![Task 5.4](./images/08-task-5.4-loki-error-logs.png)
+![Task 5.4](./images/8.png)
 
 ### 4. Negative filter:
 
@@ -304,7 +304,7 @@ filter log lines by content:
 ```
 This excludes lines containing `health`, which can be useful for filtering out health-check noise.
 
-![Task 5.5](./images/09-task-5.5-loki-exclude-health.png) 
+![Task 5.5](./images/9.png) 
 
 ### 5. Regex filter:
 
@@ -313,7 +313,7 @@ This excludes lines containing `health`, which can be useful for filtering out h
 ```
 This finds log lines containing HTTP 4xx or 5xx status codes.
 
-![Task 5.6](./images/10-task-5.6-loki-status-filter.png) 
+![Task 5.6](./images/10.png) 
 
 ### 6. Log metric queries
 
@@ -324,7 +324,7 @@ count_over_time({job="docker"}[5m])
 ```
 This counts log entries over a 5-minute window.
 
-![Task 5.7](./images/11-task-5.7-loki-log-count.png)
+![Task 5.7](./images/11.png)
 
 ### 7. Rate of logs per second:
 
@@ -333,7 +333,7 @@ rate({job="docker"}[5m])
 ```
 This calculates the rate of log entries over a 5-minute window.
 
-![Task 5.8](./images/12-task-5.8-loki-log-rate.png)
+![Task 5.8](./images/12.png)
 
 ### 8. Top containers by log volume:
 
@@ -342,7 +342,7 @@ topk(5, sum by (container_name) (rate({job="docker"}[5m])))
 ```
 This shows the top 5 containers by log rate.
 
-![Task 5.9](./images/13-task-5.9-loki-top-containers.png)
+![Task 5.9](./images/13.png)
 
 **Exercise:** Write a LogQL query that finds all error logs from the notes-app container in the last 1 hour. Then write another query that counts how many error lines per minute.
 
@@ -353,7 +353,7 @@ This shows the top 5 containers by log rate.
 ```
 This returns the matching HTTP 500 log lines from the `notes-app` container.
 
-![Task 5.10](./images/14-task-5.10-notes-app-500-logs.png) 
+![Task 5.10](./images/14.png) 
 
 **Then Count the 500 errors per minute:**
 
@@ -362,7 +362,7 @@ count_over_time({container_name="notes-app"} |= "500" [1m])
 ```
 This converts the matching error logs into a time-series showing the number of 500 errors per minute.
 
-![Task 5.11](./images/15-task-5.11-notes-app-500-errors.png)
+![Task 5.11](./images/15.png)
 
 ---
 
@@ -381,7 +381,9 @@ The real power of observability is correlation -- seeing metrics and logs togeth
 
 This adds container logs directly to the same dashboard as the existing metrics, making it easier to investigate issues from one place.
 
-![Task 6.1](./images/16-task-6.1-devops-observability-dashboard.png)
+![Task 6.1](./images/16.png)
+
+![Task 6.2](./images/17.png) 
 
 2. **Use the Explore split view:**
 
@@ -395,7 +397,7 @@ This adds container logs directly to the same dashboard as the existing metrics,
 
 This allows you to compare CPU usage with the corresponding `notes-app` logs on the same timeline.
 
-![Task 6.2](./images/17-task-6.2-prometheus-loki-correlation.png) 
+![Task 6.3](./images/18.png) 
 
 3. **Time sync:** Click on a spike in the metrics graph and both panels will zoom to that time range. This is how you debug in production -- you see a metric anomaly and immediately check the logs from that exact moment.
 
