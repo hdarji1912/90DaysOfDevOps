@@ -105,7 +105,7 @@ docker compose ps otel-collector
 ```
 The OTEL Collector starts successfully along with the observability stack.
 
-![Task 2.1](./images/01-task-2.1-otel-collector-up.png) 
+![Task 2.1](./images/1.png) 
 
 ### Verify the collector is running:
 
@@ -114,7 +114,7 @@ docker logs otel-collector 2>&1 | tail -5
 ```
 The logs confirm that the OTLP gRPC/HTTP receivers and collector services are ready.
 
-![Task 2.2](./images/02-task-2.2-otel-collector-logs.png)
+![Task 2.2](./images/2.png)
 
 ### Restart the otel-collector
 
@@ -124,7 +124,7 @@ docker compose ps otel-collector
 ```
 The OTEL Collector restarts successfully and remains available for telemetry collection.
 
-![Task 2.3](./images/03-task-2.3-otel-compose-restart-otel-collector.png) 
+![Task 2.3](./images/3.png) 
 
 ### Verify the OTEL Collector in Prometheus:
 
@@ -134,7 +134,7 @@ Open: `http://localhost:9090`
 
 **Status → Target Health → otel-collector should show `UP`**.
 
-![Task 2.4](./images/04-task-2.4-prometheus-target-health.png)
+![Task 2.4](./images/4.png)
 
 ---
 
@@ -181,7 +181,7 @@ docker logs otel-collector 2>&1 | grep -A 10 "test-span"
 ```
 The collector debug exporter prints the received `test-span` details, confirming that the trace was successfully received.
 
-![Task 3.1](./images/05-task-3.1-otel-test-span.png)
+![Task 3.1](./images/5.png)
 
 You should see the span details printed to the console. In a production setup, you would send these to a trace backend like Jaeger or Grafana Tempo for storage and visualization.
 
@@ -225,7 +225,7 @@ test_requests_total
 ```
 The metric should appear with the `my-test-service data` and a value of `42`.
 
-![Task 3.2](./images/06-task-3.2-prometheus-metric-query.png)
+![Task 3.2](./images/6.png)
 
 ### The telemetry flow is: 
 
@@ -353,7 +353,7 @@ Open `http://localhost:9090` → Status → Rule health.
 
 All five alert rules should be loaded and show an `OK` rule health status.
 
-![Task 4.1](./images/07-task-4.1-prometheus-rule-health.png)
+![Task 4.1](./images/7.png)
 
 ### Check the alert states:
 
@@ -361,7 +361,7 @@ Open `http://localhost:9090` → Alerts.
 
 Initially, the configured alerts should be `INACTIVE` when their conditions are not met.
 
-![Task 4.2](./images/08-task-4.2-prometheus-alerts.png) 
+![Task 4.2](./images/8.png) 
 
 ### Test the alert lifecycle:
 
@@ -371,11 +371,11 @@ docker compose stop notes-app
 ```
 The `TargetDown` condition becomes true and enters the `PENDING` state during its configured `1m` waiting period.
 
-![Task 4.3](./images/09-task-4.3-prometheus-alert-pending.png) 
+![Task 4.3](./images/9.png) 
 
 After the for: `1m` duration is reached, the alert transitions to FIRING.
 
-![Task 4.4](./images/10-task-4.4-prometheus-alert-firing.png)
+![Task 4.4](./images/10.png)
 
 ### Restore the application:
 
@@ -387,7 +387,7 @@ docker compose ps notes-app
 ```
 The container starts successfully and Prometheus can resume scraping the target.
 
-![Task 4.5](./images/11-task-4.5-notes-app-started.png)
+![Task 4.5](./images/11.png)
 
 ---
 
@@ -445,7 +445,7 @@ Open: `http://localhost:3000`
 
 The Grafana alert rule is successfully created and its state can be monitored from the Alert rules page.
 
-![Task 5.1](./images/12-task-5.1-grafana-memory-alert.png)
+![Task 5.1](./images/12.png)
 
 **Document:** What is the difference between Prometheus alerts and Grafana alerts? When would you use each?
 
@@ -525,7 +525,7 @@ docker compose ps
 ```
 The output confirms that all 8 services are running as part of the observability stack.
 
-![Task 6.1](./images/13-task-6.1-docker-compose-services.png) 
+![Task 6.1](./images/13.png) 
 
 ### Stop and remove the stack:
 
@@ -534,7 +534,7 @@ docker compose down
 ```
 This stops and removes the containers and the Compose network while keeping persistent volumes intact.
 
-![Task 6.1](./images/14-task-6.2-docker-compose-down.png)
+![Task 6.1](./images/14.png)
 
 ---
 

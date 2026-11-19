@@ -18,7 +18,7 @@ services:
       - monitoring
     
   notes-app:
-    image: jaishreechaure/notes-app:latest
+    image: darjihardik/notes-app:latest
     container_name: notes-app
     ports:
       - "8000:8000"
